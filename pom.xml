@@ -217,6 +217,14 @@
 			<version>2.10.0</version>
 		</dependency>
 
+		<!--SpringBoot热部署配置 -->
+		<dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-devtools</artifactId>
+		<scope>runtime</scope>
+		<optional>true</optional>
+	    </dependency>
+
 		<!--操作excel-->
 		<dependency>
 			<groupId>org.apache.poi</groupId>
@@ -303,6 +311,15 @@
 					<compilerArguments>
 						<extdirs>${project.basedir}/src/main/webapp/WEB-INF/lib</extdirs>
 					</compilerArguments>
+				</configuration>
+			</plugin>
+			<!--SpringBoot热部署配置 -->
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<fork>true</fork>
+					<addResources>true</addResources>
 				</configuration>
 			</plugin>
 
