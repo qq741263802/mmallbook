@@ -1,9 +1,9 @@
 spring:
  datasource:
    driver-class-name: com.mysql.jdbc.Driver
-   url: jdbc:mysql://127.0.0.1:3306/mmall?useunicode=true&characterEncoding=utf8
+   url: jdbc:mysql://49.235.169.216:3306/mmall?useunicode=true&characterEncoding=utf8
    username: root
-   password:
+   password: qq18924260161
 
 mybatis:
  type-aliases-package: com.lc.mmallbook.pojo
