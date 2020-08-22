@@ -6,6 +6,7 @@ import com.lc.mmallbook.pojo.User;
 import com.lc.mmallbook.service.IUserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -37,7 +38,10 @@ public class UserController {
     @RequestMapping(value= "login.do",method = RequestMethod.POST )
     @ResponseBody
     @ApiOperation(value = "用户登录")
-    @ApiImplicitParam(name = "username", value = "登录名", paramType = "query", required = true, dataType = "String")
+    @ApiImplicitParams({
+    @ApiImplicitParam(name = "username", value = "登录名", paramType = "query", required = true, dataType = "String"),
+    @ApiImplicitParam(name = "password", value = "密码", paramType = "query", required = true, dataType = "String")
+    })
     public ServerResponse<User> login(String username, String password, HttpSession session)
             {
                 ServerResponse<User> response =iUserService.login(username,password);
@@ -52,6 +56,7 @@ public class UserController {
             }
 
     @RequestMapping(value= "logout.do",method = RequestMethod.POST )
+    @ResponseBody
             public ServerResponse<String> logout(HttpSession session)
             {
 
