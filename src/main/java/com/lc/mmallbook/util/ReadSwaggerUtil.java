@@ -8,7 +8,7 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
-import org.junit.Test;
+
 
 import java.io.*;
 import java.util.HashMap;
@@ -18,7 +18,7 @@ import java.util.StringJoiner;
 public class ReadSwaggerUtil {
 
 
-    @Test
+
     public static void createfile() throws IOException {
 
         final HashMap<String, String> getdata = getdata();
@@ -230,9 +230,6 @@ public class ReadSwaggerUtil {
 
     }
 
-    public static void main(String[] args) throws IOException {
-      //  String url = "http://10.52.48.28/deepexi.dd.domain.common/v2/api-docs";
-       System.out.println(getdata());
-    }
+
 
 }

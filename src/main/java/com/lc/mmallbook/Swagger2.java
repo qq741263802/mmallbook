@@ -39,7 +39,7 @@ public class Swagger2 {
                 // 页面标题
                 .title("Spring Boot 测试使用 Swagger2 构建RESTful API")
                 // 创建人信息
-                .contact(new Contact("lhm","http://localhost:8888/","123456"))
+                .contact(new Contact("lhm","http://localhost:8080/v2/api-docs","123456"))
                 // 版本号
                 .version("1.0")
                 // 描述
