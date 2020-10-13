@@ -1,5 +1,7 @@
 package com.lc.mmallbook.util;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.lc.mmallbook.util.http.HttpClient;
 import com.lc.mmallbook.util.http.HttpHeader;
@@ -16,7 +18,7 @@ import java.util.Map;
  */
 public class LbReptileUtil {
 
-    private static  final String URL="https://ec.snssdk.com/product/lubanajaxstaticitem?id=3414589641746189084&token=254ddfbb9d367ea6de2c4e5d53b66a2c&page_id=&scope_type=5&b_type_new=0";
+    private static  final String URL="https://ec.snssdk.com/product/lubanajaxstaticitem?id=3438007932145553597&token=ad14e5631f60a76eaf895adaaf4c1a84&page_id=&scope_type=5&b_type_new=0";
 
     public static String Getllcphone() throws IOException {
         HttpParamers paramers=new HttpParamers(HttpMethod.GET);
@@ -30,9 +32,16 @@ public class LbReptileUtil {
 
     public static void main(String[] args) throws IOException {
 
+
         String response=  LbReptileUtil.Getllcphone();
         JSONObject jsonObject = JSONObject.parseObject(response);
-        System.out.println(jsonObject.getString("st"));
+        System.out.println(response);
+        JSONObject data = JSONObject.parseObject(jsonObject.getString("data"));
+        JSONObject freight = JSONObject.parseObject(data.getString("freight"));
+       // JSONObject columns = JSONObject.parseObject(freight.getString("columns"));
+        JSONArray columns = JSON.parseArray(freight.getString("columns"));
+        System.out.println(columns);
+
 
     }
 
