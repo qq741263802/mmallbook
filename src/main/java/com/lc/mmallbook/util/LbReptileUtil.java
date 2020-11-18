@@ -63,26 +63,26 @@ public class LbReptileUtil {
     }
 
 
-
-    public static void main(String[] args) throws Exception {
-
-        String loginPublicKey= "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCWqmlnUmee2iILSz0HR7Z3dfvk1YqLR+sOb7+ZKsd4fXmh+ruwSFQjGLmySv2ZEs8gLNDqml84+AkH9ZLlAEoMCWT/MPiOwoQxr9uVDYcQUkxh1AsC1fEVD89EZpsZHGmEhw3/sRCeA3ZDhxVElpqi1RzWAKMT066BH/F0/9qZrQIDAQAB";
-        String password =rsaEncrypt("abcd4321",loginPublicKey);
-        System.out.println(password);
-
 //
-//        String response=  LbReptileUtil.Getllcphone();
-//        JSONObject jsonObject = JSONObject.parseObject(response);
-//        System.out.println(response);
-//        JSONObject payload = JSONObject.parseObject(jsonObject.getString("payload"));
-//        JSONArray content = JSON.parseArray(payload.getString("content"));
-//        JSONObject contentob = JSON.parseObject(content.getString(0));
-//        JSONArray items = JSON.parseArray(contentob.getString("items"));
-//        JSONObject itemsob = JSON.parseObject(items.getString(0));
-//        System.out.println(itemsob.getString("id"));
-
-
-    }
+//    public static void main(String[] args) throws Exception {
+//
+//        String loginPublicKey= "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCWqmlnUmee2iILSz0HR7Z3dfvk1YqLR+sOb7+ZKsd4fXmh+ruwSFQjGLmySv2ZEs8gLNDqml84+AkH9ZLlAEoMCWT/MPiOwoQxr9uVDYcQUkxh1AsC1fEVD89EZpsZHGmEhw3/sRCeA3ZDhxVElpqi1RzWAKMT066BH/F0/9qZrQIDAQAB";
+//        String password =rsaEncrypt("abcd4321",loginPublicKey);
+//        System.out.println(password);
+//
+////
+////        String response=  LbReptileUtil.Getllcphone();
+////        JSONObject jsonObject = JSONObject.parseObject(response);
+////        System.out.println(response);
+////        JSONObject payload = JSONObject.parseObject(jsonObject.getString("payload"));
+////        JSONArray content = JSON.parseArray(payload.getString("content"));
+////        JSONObject contentob = JSON.parseObject(content.getString(0));
+////        JSONArray items = JSON.parseArray(contentob.getString("items"));
+////        JSONObject itemsob = JSON.parseObject(items.getString(0));
+////        System.out.println(itemsob.getString("id"));
+//
+//
+//    }
 
 
 }

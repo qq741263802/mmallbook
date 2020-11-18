@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.Random;
 import java.util.UUID;
@@ -37,7 +38,9 @@ import java.util.UUID;
 
 	}
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
+
+     //   String	productName=com.lc.mmallbook.util.LbReptileUtil.rsaEncrypt();
 
 //
 //		String	productName = new StringBuffer().append("%").append("123").append("%").toString();
