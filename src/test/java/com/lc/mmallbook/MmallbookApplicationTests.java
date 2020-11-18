@@ -1,12 +1,22 @@
 package com.lc.mmallbook;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
 import com.lc.mmallbook.common.ServerResponse;
 import com.lc.mmallbook.pojo.Product;
 import com.lc.mmallbook.service.IProductService;
+import com.lc.mmallbook.util.LbReptileUtil;
+import com.lc.mmallbook.util.excel.ExcelUtil;
+import com.lc.mmallbook.util.excel.User;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 import java.math.BigDecimal;
 import java.util.Random;
 import java.util.UUID;
@@ -35,17 +45,32 @@ import java.util.UUID;
 
 		}
 
-	}
-
-	public static void main(String[] args) {
-
 //
-//		String	productName = new StringBuffer().append("%").append("123").append("%").toString();
-//		System.out.println(productName);
+//		String response=  LbReptileUtil.Getllcphone();
+//		JSONObject jsonObject = JSONObject.parseObject(response);
+//		JSONObject data = JSONObject.parseObject(jsonObject.getString("data"));
+//		JSONArray spec_info = JSON.parseArray(data.getString("spec_info"));
+//		JSONObject name= JSONObject.parseObject(spec_info.getString(0));
+//		JSONArray list = JSON.parseArray(name.getString("list"));
+//		JSONObject id= JSONObject.parseObject(list.getString(0));
+
+
+
+	}
+
+
+	@Test
+	void setExcel() throws IOException {
+
+
+      String filename= "D:/user1.xls";
+      ExcelUtil.writeExcel(filename);
 
 
 
 
 	}
+
+
 
 }
