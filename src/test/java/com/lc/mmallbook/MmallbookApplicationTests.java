@@ -62,9 +62,11 @@ import java.util.UUID;
 	@Test
 	void setExcel() throws IOException {
 
-
+      User user=new User();
+      user.setAge(20);
+      user.setName("liuxing");
       String filename= "D:/user1.xls";
-      ExcelUtil.writeExcel(filename);
+      ExcelUtil.writeExcel(filename,user);
 
 
 
