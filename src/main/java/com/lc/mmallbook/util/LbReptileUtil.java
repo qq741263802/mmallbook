@@ -26,8 +26,6 @@ public class LbReptileUtil {
     public static final String KEY_ALGORITHM = "RSA";
     private static  final String URL="http://10.52.48.28/deepexi.dd.domain.transaction/admin-api/v1/domain/transaction/saleOrderInfo/oLpage?page=1&size=10&total=1&status=9&orgId=987&notTickTypeStr=0&availablePickNumNotZero=true&likeCode=GL20201028101137&productId=570&userId=10776&tenantId=gree&appId=623";
 
-    private static  final String URL="https://ec.snssdk.com/product/lubanajaxstaticitem?id=3438007932145553597&token=ad14e5631f60a76eaf895adaaf4c1a84&page_id=&scope_type=5&b_type_new=0";
-
     public static String Getllcphone() throws IOException {
         HttpParamers paramers=new HttpParamers(HttpMethod.GET);
         HttpHeader header=new HttpHeader();
@@ -63,7 +61,7 @@ public class LbReptileUtil {
     }
 
 
-//
+
 //    public static void main(String[] args) throws Exception {
 //
 //        String loginPublicKey= "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCWqmlnUmee2iILSz0HR7Z3dfvk1YqLR+sOb7+ZKsd4fXmh+ruwSFQjGLmySv2ZEs8gLNDqml84+AkH9ZLlAEoMCWT/MPiOwoQxr9uVDYcQUkxh1AsC1fEVD89EZpsZHGmEhw3/sRCeA3ZDhxVElpqi1RzWAKMT066BH/F0/9qZrQIDAQAB";

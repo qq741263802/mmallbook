@@ -4,24 +4,8 @@ import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
-import org.apache.poi.ss.usermodel.BorderStyle;
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.CellStyle;
-import org.apache.poi.ss.usermodel.CellType;
-import org.apache.poi.ss.usermodel.Font;
-import org.apache.poi.ss.usermodel.HorizontalAlignment;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.VerticalAlignment;
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.ss.util.CellRangeAddress;
-import org.apache.poi.ss.util.RegionUtil;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -46,12 +30,13 @@ public class ExcelUtil {
     }
 
 
+
     /**
      * 把数据写入到Excel文件
      *
      * @param fileName 自动生成的Excel文件的全路径文件名称
      */
-    public static void writeExcel(String fileName) throws IOException {
+    public static void writeExcel(String fileName,User user) throws IOException {
 
 
         //第一步，创建一个workbook对应一个excel文件
@@ -69,15 +54,11 @@ public class ExcelUtil {
 
         //第五步，写入实体数据，实际应用中这些数据从数据库得到,对象封装数据，集合包对象。对象的属性值对应表的每行的值
         List<User>  users = new ArrayList<>();
-        User user = new User();
-        user.setAge();
-        user.setName("liuxing");
-        users.add(user1);
+        users.add(user);
         for (int i = 0; i < users.size(); i++) {
             HSSFRow row1 = sheet.createRow(i + 1);
-            User user = users.get(i);
             //创建单元格设值
-            row1.createCell(0).setCellValue(user.getId());
+            row1.createCell(0).setCellValue(user.getAge());
             row1.createCell(1).setCellValue(user.getName());
 
 
