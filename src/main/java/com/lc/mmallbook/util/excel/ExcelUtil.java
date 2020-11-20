@@ -4,8 +4,8 @@ import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
-import java.io.File;
-import java.io.IOException;
+
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -79,6 +79,60 @@ public class ExcelUtil {
         }
 
     }
+
+
+
+
+    /**
+     * 读取txt文件的内容
+     * @param file 想要读取的文件对象
+     * @return 返回文件内容
+     */
+    public static String readTxt(File file){
+        StringBuilder result = new StringBuilder();
+        try{
+            BufferedReader br = new BufferedReader(new FileReader(file));//构造一个BufferedReader类来读取文件
+            String s = null;
+            while((s = br.readLine())!=null){//使用readLine方法，一次读一行
+                result.append(System.lineSeparator()+s);
+
+            }
+            br.close();
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        return result.toString();
+    }
+
+
+    /**使用FileOutputStream来写入txt文件
+     * @param txtPath txt文件路径
+     * @param content 需要写入的文本
+     */
+    public static void writeTxt(String txtPath,String content){
+        FileOutputStream fileOutputStream = null;
+        File file = new File(txtPath);
+        try {
+            if(file.exists()){
+                //判断文件是否存在，如果不存在就新建一个txt
+                file.createNewFile();
+            }
+            fileOutputStream = new FileOutputStream(file);
+            fileOutputStream.write(content.getBytes());
+            fileOutputStream.flush();
+            fileOutputStream.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    public static void main(String[] args){
+         writeTxt("D:/errlog.txt","测试");
+
+
+    }
+
 
 }
 

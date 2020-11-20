@@ -65,34 +65,34 @@ import org.json.*;
       user.setName("liuxing");
       String filename= "D:/user1.xls";
       ExcelUtil.writeExcel(filename,user);
-
-        String drive = "org.gjt.mm.mysql.Driver";
-        String url = "jdbc:mysql://81.71.4.237:3306/";
-        String dbName = "mmall";
-        String user1 = "root";
-        String pass = "qq18924260161";
-        String history = "";
-        String response = "";
-        String failuer = "";
-        String query ="select * from mmall_user";
-        Connection Mycon = null;
-        Statement Mystmt = null;
-        ResultSet Myrset = null;
-        try{
-            Mycon = DriverManager.getConnection(url+dbName, user1, pass);
-
-        }	catch(SQLException e){
-
-        }
-        Mystmt = Mycon.createStatement();
-        Myrset = Mystmt.executeQuery(query);
-        while (Myrset.next()){
-            history = Myrset.getString(2);
-           // String name = Myrset.getString(2);
-            System.out.println(history);
-        }
-        Myrset.close();
-        Mystmt.close();
+//
+//        String drive = "org.gjt.mm.mysql.Driver";
+//        String url = "jdbc:mysql://81.71.4.237:3306/";
+//        String dbName = "mmall";
+//        String user1 = "root";
+//        String pass = "qq18924260161";
+//        String history = "";
+//        String response = "";
+//        String failuer = "";
+//        String query ="select * from mmall_user";
+//        Connection Mycon = null;
+//        Statement Mystmt = null;
+//        ResultSet Myrset = null;
+//        try{
+//            Mycon = DriverManager.getConnection(url+dbName, user1, pass);
+//
+//        }	catch(SQLException e){
+//
+//        }
+//        Mystmt = Mycon.createStatement();
+//        Myrset = Mystmt.executeQuery(query);
+//        while (Myrset.next()){
+//            history = Myrset.getString(2);
+//           // String name = Myrset.getString(2);
+//            System.out.println(history);
+//        }
+//        Myrset.close();
+//        Mystmt.close();
 
 //        if(history == "")
 //        {

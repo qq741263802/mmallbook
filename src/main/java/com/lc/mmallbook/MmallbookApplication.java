@@ -13,4 +13,5 @@ public class MmallbookApplication {
 		SpringApplication.run(MmallbookApplication.class, args);
 	}
 
+
 }
