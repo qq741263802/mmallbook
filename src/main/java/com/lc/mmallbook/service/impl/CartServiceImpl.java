@@ -26,6 +26,8 @@ public class CartServiceImpl implements ICartService {
     private CartMapper cartMapper;
 
 
+
+
     @Override
     public ServerResponse add(Integer count, Integer productId) {
 
@@ -34,6 +36,7 @@ public class CartServiceImpl implements ICartService {
             return ServerResponse.createByErrorMessage("参数不能为空");
 
         }
+
         Cart cart=new Cart();
         cart.setProductId(productId);
         cart.setQuantity(count);
