@@ -1,6 +1,7 @@
 package com.lc.mmallbook.controller.portal;
 
 import com.lc.mmallbook.common.Const;
+import com.lc.mmallbook.common.ResponseCode;
 import com.lc.mmallbook.common.ServerResponse;
 import com.lc.mmallbook.pojo.User;
 import com.lc.mmallbook.service.ICartService;
@@ -30,6 +31,9 @@ public class CartController {
       {
 
           User user = (User)session.getAttribute(Const.CURRENT_USER);
+          if(user ==null){
+              return ServerResponse.createByErrorCodeMessage(ResponseCode.NEED_LOGIN.getCode(),ResponseCode.NEED_LOGIN.getDesc());
+          }
 
           return iCartService.add(count,productId);
 
