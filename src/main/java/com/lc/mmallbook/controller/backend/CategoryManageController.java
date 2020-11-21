@@ -24,7 +24,8 @@ import javax.servlet.http.HttpSession;
 @Api(description = "类目操作接口")
 @Controller
 @RequestMapping("/manage/category")
-public class CategoryManageController {
+public class
+CategoryManageController {
 
     @Autowired
     private IUserService iUserService;
