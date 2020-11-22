@@ -127,12 +127,12 @@ public class ExcelUtil {
     }
 
 
-    public static void main(String[] args){
-         writeTxt("D:/errlog.txt","测试");
-
-
-    }
-
+//    public static void main(String[] args){
+//         writeTxt("D:/errlog.txt","测试");
+//
+//
+//    }
+//
 
 }
 
