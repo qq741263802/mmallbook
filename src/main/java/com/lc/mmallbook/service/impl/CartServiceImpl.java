@@ -50,8 +50,13 @@ public class CartServiceImpl implements ICartService {
             return ServerResponse.createByErrorCodeMessage(ResponseCode.ILLEGAL_ARGUMENT.getCode(), ResponseCode.ILLEGAL_ARGUMENT.getDesc());
 
         }
+        Product product=productMapper.selectByPrimaryKey(productId);
+        if (product==null)
+        {
 
 
+            return ServerResponse.createByErrorMessage("商品id不存在");
+        }
 
         Cart cart = cartMapper.selectCartByUserIdProductId(userId, productId);
         if (cart == null) {
