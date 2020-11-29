@@ -1,5 +1,6 @@
 package com.lc.mmallbook;
 
+import com.google.common.base.Splitter;
 import com.lc.mmallbook.common.ServerResponse;
 import com.lc.mmallbook.pojo.Product;
 import com.lc.mmallbook.service.IProductService;
@@ -60,11 +61,14 @@ import org.json.*;
 	@Test
 	void setExcel() throws IOException, SQLException {
 
-      User user=new User();
-      user.setAge(20);
-      user.setName("liuxing");
-      String filename= "D:/user1.xls";
-      ExcelUtil.writeExcel(filename,user);
+//      User user=new User();
+//      user.setAge(20);
+//      user.setName("liuxing");
+//      String filename= "D:/user1.xls";
+//      ExcelUtil.writeExcel(filename,user);
+
+
+
 //
 //        String drive = "org.gjt.mm.mysql.Driver";
 //        String url = "jdbc:mysql://81.71.4.237:3306/";
