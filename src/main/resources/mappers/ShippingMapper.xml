@@ -202,7 +202,7 @@
   </delete>
 
 
-  <update id="updateByShipping" parameterType="com.mmall.pojo.Shipping">
+  <update id="updateByShipping" parameterType="com.lc.mmallbook.pojo.Shipping">
     update mmall_shipping
     set
     receiver_name = #{receiverName,jdbcType=VARCHAR},

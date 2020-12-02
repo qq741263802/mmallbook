@@ -1,5 +1,4 @@
 package com.lc.mmallbook.service.impl;
-
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.google.common.collect.Maps;
@@ -9,7 +8,6 @@ import com.lc.mmallbook.pojo.Shipping;
 import com.lc.mmallbook.service.IShippingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.Map;
 

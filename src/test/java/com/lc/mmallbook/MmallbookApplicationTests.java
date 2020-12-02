@@ -28,21 +28,21 @@ import org.json.*;
 
 	@Test
 	void contextLoads() {
-		for(int i=0;i<1;i++)
-		{
-			BigDecimal loanAmount = new BigDecimal("15000.48");
-			double price=22;
-			Product product=new Product();
-			product.setCategoryId(100002);
-			product.setName("活动商品");
-			product.setSubtitle("活动商品副标题");
-			product.setSubImages(UUID.randomUUID().toString());
-			product.setPrice(loanAmount);
-			product.setStock(22);
-			ServerResponse ss= iProductService.saveOrUpdateProduct(product);
-			System.out.println(ss.getData());
-
-		}
+//		for(int i=0;i<1;i++)
+//		{
+//			BigDecimal loanAmount = new BigDecimal("15000.48");
+//			double price=22;
+//			Product product=new Product();
+//			product.setCategoryId(100002);
+//			product.setName("活动商品");
+//			product.setSubtitle("活动商品副标题");
+//			product.setSubImages(UUID.randomUUID().toString());
+//			product.setPrice(loanAmount);
+//			product.setStock(22);
+//			ServerResponse ss= iProductService.saveOrUpdateProduct(product);
+//			System.out.println(ss.getData());
+//
+//		}
 
 //
 //		String response=  LbReptileUtil.Getllcphone();
