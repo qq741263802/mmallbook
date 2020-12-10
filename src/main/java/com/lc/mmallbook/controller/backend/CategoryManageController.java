@@ -21,9 +21,9 @@ import javax.servlet.http.HttpSession;
  * @author lhm
  * @date 2020/8/12 23:48
  */
-@Api(description = "类目操作接口")
 @Controller
 @RequestMapping("/manage/category")
+@Api(description = "后台类目管理")
 public class CategoryManageController {
 
     @Autowired

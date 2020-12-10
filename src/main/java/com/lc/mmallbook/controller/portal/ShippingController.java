@@ -7,9 +7,11 @@ import com.lc.mmallbook.common.ServerResponse;
 import com.lc.mmallbook.pojo.Shipping;
 import com.lc.mmallbook.pojo.User;
 import com.lc.mmallbook.service.IShippingService;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -20,9 +22,9 @@ import javax.servlet.http.HttpSession;
  * @date 2020/11/30 22:55
  *
  */
-
     @Controller
     @RequestMapping("/shipping/")
+    @Api(description = "收货地址管理")
     public class ShippingController {
 
 
@@ -30,7 +32,7 @@ import javax.servlet.http.HttpSession;
         private IShippingService iShippingService;
 
 
-        @RequestMapping("add.do")
+        @RequestMapping(value = "add.do",method = RequestMethod.POST)
         @ResponseBody
         public ServerResponse add(HttpSession session, Shipping shipping){
             User user = (User)session.getAttribute(Const.CURRENT_USER);
@@ -41,7 +43,7 @@ import javax.servlet.http.HttpSession;
         }
 
 
-        @RequestMapping("del.do")
+        @RequestMapping(value = "del.do",method = RequestMethod.POST)
         @ResponseBody
         public ServerResponse del(HttpSession session,Integer shippingId){
             User user = (User)session.getAttribute(Const.CURRENT_USER);
@@ -51,7 +53,7 @@ import javax.servlet.http.HttpSession;
             return iShippingService.del(user.getId(),shippingId);
         }
 
-        @RequestMapping("update.do")
+        @RequestMapping(value = "update.do",method = RequestMethod.POST)
         @ResponseBody
         public ServerResponse update(HttpSession session,Shipping shipping){
             User user = (User)session.getAttribute(Const.CURRENT_USER);
@@ -62,7 +64,7 @@ import javax.servlet.http.HttpSession;
         }
 
 
-        @RequestMapping("select.do")
+        @RequestMapping(value = "select.do",method = RequestMethod.GET)
         @ResponseBody
         public ServerResponse<Shipping> select(HttpSession session,Integer shippingId){
             User user = (User)session.getAttribute(Const.CURRENT_USER);
@@ -73,7 +75,7 @@ import javax.servlet.http.HttpSession;
         }
 
 
-        @RequestMapping("list.do")
+        @RequestMapping(value = "list.do",method = RequestMethod.GET)
         @ResponseBody
         public ServerResponse<PageInfo> list(@RequestParam(value = "pageNum",defaultValue = "1") int pageNum,
                                              @RequestParam(value = "pageSize",defaultValue = "10")int pageSize,

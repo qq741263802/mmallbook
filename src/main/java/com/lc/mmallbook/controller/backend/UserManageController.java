@@ -4,6 +4,7 @@ import com.lc.mmallbook.common.Const;
 import com.lc.mmallbook.common.ServerResponse;
 import com.lc.mmallbook.pojo.User;
 import com.lc.mmallbook.service.IUserService;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,6 +19,7 @@ import javax.servlet.http.HttpSession;
  */
 @Controller
 @RequestMapping("/manage/user")
+@Api(description = "后台用户管理")
 public class UserManageController {
 
     @Autowired

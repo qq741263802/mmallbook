@@ -4,6 +4,7 @@ import com.github.pagehelper.PageInfo;
 import com.lc.mmallbook.common.ServerResponse;
 import com.lc.mmallbook.service.IProductService;
 import com.lc.mmallbook.vo.ProductDetailVo;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,6 +19,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 @RequestMapping("/product/")
+@Api(description = "前台商品管理")
 public class ProductController {
 
 

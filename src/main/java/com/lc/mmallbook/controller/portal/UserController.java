@@ -22,7 +22,7 @@ import javax.servlet.http.HttpSession;
  */
 @Controller
 @RequestMapping("/user/")
-@Api(description = "用户操作接口")
+@Api(description = "前台用户管理")
 public class UserController {
 
     @Autowired

@@ -29,9 +29,9 @@ import java.util.Map;
  * @author lhm
  * @date 2020/8/30 23:23
  */
-@Api(description = "商品操作接口")
 @Controller
 @RequestMapping("/manage/product")
+@Api(description = "后台商品管理")
 public class ProductManageController {
 
         @Autowired

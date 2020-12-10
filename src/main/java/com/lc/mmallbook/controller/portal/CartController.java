@@ -6,6 +6,7 @@ import com.lc.mmallbook.common.ServerResponse;
 import com.lc.mmallbook.pojo.User;
 import com.lc.mmallbook.service.ICartService;
 import com.lc.mmallbook.vo.CartVo;
+import io.swagger.annotations.Api;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -21,6 +22,7 @@ import javax.servlet.http.HttpSession;
  */
 @Controller
 @RequestMapping("/cart/")
+@Api(description = "购物车")
 public class CartController {
 
     @Autowired
