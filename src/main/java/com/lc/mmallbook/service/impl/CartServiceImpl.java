@@ -6,6 +6,7 @@ import com.lc.mmallbook.common.Const;
 import com.lc.mmallbook.common.ResponseCode;
 import com.lc.mmallbook.common.ServerResponse;
 import com.lc.mmallbook.dao.CartMapper;
+import com.lc.mmallbook.dao.CategoryMapper;
 import com.lc.mmallbook.dao.ProductMapper;
 import com.lc.mmallbook.pojo.Cart;
 import com.lc.mmallbook.pojo.Product;
@@ -100,6 +101,7 @@ public class CartServiceImpl implements ICartService {
         }
         cartMapper.deleteByUserIdProductIds(userId,productList);
         return this.list(userId);
+
     }
 
 
@@ -191,6 +193,7 @@ public class CartServiceImpl implements ICartService {
             return cartMapper.selectCartProductCheckedStatusByUserId(userId) == 0;
 
         }
+
 
 
 }

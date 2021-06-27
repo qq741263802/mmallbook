@@ -10,6 +10,7 @@ import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -68,7 +69,7 @@ public class UserController {
 
     @RequestMapping(value= "register.do",method = RequestMethod.POST )
     @ResponseBody
-    public ServerResponse<String> register(User user)
+    public ServerResponse<String> register(@RequestBody User user)
 
     {
 
